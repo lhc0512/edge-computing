@@ -1,0 +1,25 @@
+edgeComputing:
+    scheduler: reliability-two-choice
+    flag: flag
+    edgeNodeNumber: 10
+    episodeLimit: 50
+    episodeNumber: 200
+    
+    testNumber: 5
+    testFrequency: 10
+
+    taskSeed: 102
+    reliabilitySeed: 102
+    schedulerSeed: 102
+    runner: heuristic-data
+    # runner: heuristic
+
+
+heuristic:
+    name: reliability-two-choice
+
+rl:
+    buffer-size: 10000
+    batch-size: 64
+    action-shape: 11
+    state-shape: 52

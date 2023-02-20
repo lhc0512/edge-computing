@@ -1,0 +1,47 @@
+edgeComputing:
+    scheduler: rl
+
+    flag: flag
+    
+    edgeNodeNumber: 10
+    episodeLimit: 50
+    episodeNumber: 200
+    
+    testNumber: 5
+    testFrequency: 10
+
+    taskSeed: 102
+    reliabilitySeed: 102
+    schedulerSeed: 102
+    runner: rl-test
+    # runner: rl-offline
+rl:
+    name: masac
+    learning-rate: 0.0003
+    hidden-shape: 64
+    use-normalized-reward: true
+
+    training-time: 400
+    test-frequency: 100
+
+    buffer-path: buffer_path
+    use-cql: true
+    cql-weight: 0.1
+    use-soft-update: true
+    tau: 0.005
+    use-adaptive-alpha: true
+    alpha: 0.2
+    target-entropy-coef: 0.95
+    # alpha: 0.05
+    gamma: 0.99
+
+    buffer-size: 10000
+    batch-size: 128
+    action-shape: 11
+    state-shape: 52
+
+    # offline-to-online
+    use-addition-critic: true
+    
+    use-trained-model: true
+    model-flag: model_flag

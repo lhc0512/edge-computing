@@ -1,0 +1,20 @@
+edgeComputing:
+    scheduler: reactive
+
+    testNumber: 5
+    testFrequency: 10
+    
+    flag: flag
+    
+    edgeNodeNumber: 10
+    episodeLimit: 50
+    episodeNumber: 5
+
+    taskSeed: 102
+    reliabilitySeed: 102
+    schedulerSeed: 102
+    runner: heuristic
+    
+heuristic:
+    name: reactive
+    queue-coef: 1.0

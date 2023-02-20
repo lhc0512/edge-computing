@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: ${spring_application_name:edge-node-1}
+    profiles:
+#         active: edge-computing,reactive
+#         active: edge-computing,reliability-two-choice
+#         active: edge-computing,mappo
+#         active: edge-computing,masac
+        active: edge-computing,random
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 222.201.187.50:30848
+                watch-delay: 3000
+            config:
+                server-addr: 222.201.187.50:30848
+                prefix: application
+                file-extension: yaml

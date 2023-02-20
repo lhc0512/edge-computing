@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    namespace: edge-computing
+    name: edge-controller
+    labels:
+        app: edge-controller
+spec:
+    containers:
+        -   name: edge-controller
+            image: edge-controller:v1.0
+            imagePullPolicy: IfNotPresent
+    restartPolicy: Always

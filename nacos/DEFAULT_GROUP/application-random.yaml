@@ -1,0 +1,22 @@
+edgeComputing:
+    scheduler: random
+    flag: flag
+    
+    edgeNodeNumber: 10
+    episodeLimit: 50
+    episodeNumber: 200
+    
+    testNumber: 5
+    testFrequency: 10
+
+    # runner: heuristic-data
+    runner: heuristic
+    # runner: rl-offline
+    # runner: rl-test
+
+    taskSeed: 102
+    reliabilitySeed: 102
+    schedulerSeed: 102
+    
+heuristic:
+    name: random

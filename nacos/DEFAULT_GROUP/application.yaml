@@ -1,0 +1,16 @@
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://xxx.xxx.xxx.xxx:3306/edge_computing?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT
+        username: root
+        password: 123456
+
+mybatis-plus:
+    global-config:
+        db-config:
+            id-type: auto
+            table-prefix: ec_
+hadoop:
+    hdfs:
+        url: hdfs://xxx.xxx.xxx.xxx:9000

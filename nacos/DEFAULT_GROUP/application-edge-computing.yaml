@@ -1,0 +1,24 @@
+edgeComputing:
+    seed: 100
+    edgeNodeSeed: 100
+    taskSeed: 100
+    reliabilitySeed: 100
+    schedulerSeed: 100
+    minTaskRate: 0
+    maxTaskRate: 1.0
+    cpuCapacity: 3
+    minCpuCore: 4
+    maxCpuCore: 32
+    minTaskSize: 500
+    maxTaskSize: 2500
+    minTaskComplexity: 400
+    maxTaskComplexity: 800
+    deadline: 1000
+    minTransmissionRate: 10
+    maxTransmissionRate: 40
+    minTransmissionFailureRate: 0
+    maxTransmissionFailureRate: 0.03
+    minExecutionFailureRate: 0
+    maxExecutionFailureRate: 0.4
+    timeSlot: 100
+    queueCoef: 3.0

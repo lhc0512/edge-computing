@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    labels:
+        run: mysql
+    name: mysql
+spec:
+    containers:
+        -   env:
+                -   name: MYSQL_ROOT_PASSWORD
+                    value: "123456"
+            image: mysql
+            name: mysql
+            volumeMounts:
+                -   mountPath: /var/lib/mysql
+                    name: data
+                -   mountPath: /etc/mysql/conf.d
+                    name: conf
+            resources: { }
+    volumes:
+        -   name: data
+            nfs:
+                path: /home/hongcai/lhc_data/mysql/data
+                server: 222.201.187.50
+        -   name: conf
+            nfs:
+                path: /home/hongcai/lhc_data/mysql/conf
+                server: 222.201.187.50
+    dnsPolicy: ClusterFirst
+    restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    labels:
+        run: mysql
+    name: mysql
+spec:
+    ports:
+        -   port: 3306
+            protocol: TCP
+            nodePort: 30306
+            targetPort: 3306
+    selector:
+        run: mysql
+    type: NodePort

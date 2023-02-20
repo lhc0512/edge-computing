@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: edge-experiment
+  profiles:
+    #        active: edge-computing,mappo
+    #        active: edge-computing,masac
+    #        active: edge-computing,reliability-two-choice
+    #        active: edge-computing,reactive
+    active: edge-computing,random
+  #        active: edge-computing,local
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 222.201.187.50:30848
+        watch-delay: 3000
+      config:
+        server-addr: 222.201.187.50:30848
+        prefix: application
+        file-extension: yaml
+server:
+  port: 9001

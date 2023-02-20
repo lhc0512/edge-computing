@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    namespace: edge-computing
+    name: edge-experiment
+    labels:
+        app: edge-experiment
+spec:
+    containers:
+        -   name: edge-experiment
+            image: edge-experiment:v1.0
+            imagePullPolicy: IfNotPresent
+    restartPolicy: Always

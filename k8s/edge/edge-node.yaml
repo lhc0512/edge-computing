@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    namespace: edge-computing
+    name: $spring_application_name
+    labels:
+        app: $spring_application_name
+spec:
+    containers:
+        -   name: $spring_application_name
+            image: edge-node:v1.0
+            imagePullPolicy: IfNotPresent
+            env:
+                -   name: spring_application_name
+                    value: $spring_application_name
+    restartPolicy: Always

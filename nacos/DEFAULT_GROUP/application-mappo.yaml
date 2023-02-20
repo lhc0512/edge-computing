@@ -1,0 +1,41 @@
+edgeComputing:
+    scheduler: rl
+    flag: flag
+
+    edgeNodeNumber: 10
+    episodeLimit: 50
+    episodeNumber: 50
+    
+    testNumber: 5
+    testFrequency: 10
+
+    taskSeed: 102
+    reliabilitySeed: 102
+    schedulerSeed: 102
+    # runner: rl-test
+    runner: rl-online
+rl:
+    name: mappo
+    learning-rate: 0.0003
+    use-learning-rate-decay: false
+    start-learning-rate: 0.0003
+    end-learning-rate: 0.0
+    use-clip-grad: true
+    clip-grad-coef: 10
+    use-normalized-reward: true
+    gamma: 0.99
+    use-gae: true
+    gae-lambda: 0.95
+    clip: 0.2
+    use-entropy: false
+    entropy-coef: 0.01
+    hidden-shape: 64
+    epoch: 4
+
+    use-trained-model: false
+    model-flag: model_flag
+
+    buffer-size: 50
+    batch-size: 50
+    action-shape: 11
+    state-shape: 52
